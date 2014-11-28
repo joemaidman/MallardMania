@@ -55,7 +55,7 @@ window.onload = function () {
      */
     queue.loadManifest([
         //sounds
-        { id: 'menuMusic', src: 'assets/intromusic.mp3' },
+        { id: 'menuMusic', src: 'assets/introMusic.mp3' },
         { id: 'quackSound', src: 'assets/quack.mp3' },
         { id: 'shot', src: 'assets/shot.mp3' },
         { id: 'background', src: 'assets/countryside.mp3' },
@@ -86,7 +86,16 @@ window.onload = function () {
 
 }
 
+function doneLoading()
+{
+    document.getElementById("loading").style.display="none";
+    
+}
+
 function queueLoaded(event) {
+
+    doneLoading();
+
     stage = new createjs.Stage("myCanvas");
     stage.enableMouseOver(20);
 
@@ -149,6 +158,7 @@ function queueLoaded(event) {
 
     createjs.Ticker.setFPS(20);
     createjs.Ticker.addEventListener('tick', stage);
+    
     createjs.Sound.play("menuMusic", { loop: -1 });
 }
 

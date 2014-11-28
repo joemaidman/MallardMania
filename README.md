@@ -7,6 +7,10 @@ See the show on Youtube at http://www.youtube.com/playlist?list=PLAgylfU8wrtsQWp
 
 ============
 
+Demo available here: http://www.joesshed.com/mallardmania/mallardmania.html
+
+============
+
 Additional features:
 
 Random sprite direction
@@ -17,4 +21,4 @@ Bootsrap theme for HTML/CSS page
 Mouse offset for canvas position on page
 Gunshot audio can be interrupted to reflect actual shots.
 
-
+============
