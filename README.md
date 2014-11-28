@@ -7,6 +7,14 @@ See the show on Youtube at http://www.youtube.com/playlist?list=PLAgylfU8wrtsQWp
 
 ============
 
+Additional features:
 
+Random sprite direction
+Random scale
+Title menu
+Game over menu with high scores
+Bootsrap theme for HTML/CSS page
+Mouse offset for canvas position on page
+Gunshot audio can be interrupted to reflect actual shots.
 
 
