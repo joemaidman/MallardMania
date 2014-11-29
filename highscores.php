@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
     <title>Mallard Mania</title>
     
     <link href="bootstrap.min.css" type="text/css" rel="stylesheet" />

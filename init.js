@@ -97,7 +97,7 @@ function queueLoaded(event) {
     doneLoading();
 
     stage = new createjs.Stage("myCanvas");
-    stage.enableMouseOver(20);
+    
 
     menuBG = new createjs.Bitmap(queue.getResult("menuBG"))
     stage.addChild(menuBG);
@@ -286,8 +286,7 @@ function startGame(backgroundNumber) {
     // Set up events AFTER the game is loaded
     window.onmousemove = handleMouseMove;
     window.onmousedown = handleMouseDown;
-
-
+    
 
 }
 
@@ -370,10 +369,12 @@ function tickEvent() {
 
 
 function handleMouseMove(event) {
-
-    var x = event.x;
-    var y = event.y;
-
+ 
+  
+    var x = event.clientX;
+    var y = event.clientY;
+    console.log(event);
+    console.log(y);
 
     // set mouseposition relative to canvas
     var canvas = document.getElementById("myCanvas");
@@ -390,8 +391,8 @@ function handleMouseMove(event) {
 
 function handleMouseDown(event) {
 
-    var x = event.x;
-    var y = event.y;
+    var x = event.clientX;
+    var y = event.clientY;
 
     // Calculate mouseposition relative to canvas
     var canvas = document.getElementById("myCanvas");
