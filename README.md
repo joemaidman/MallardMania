@@ -1,9 +1,9 @@
 Mallard Mania
 ============
 
-Based on the open source project by Mark Lassoff, 30MinuteGamefrom ByteArray.
+A duck hunt style HTML canvas games using the CreateJS library (http://www.createjs.com), based on the open source project by Mark Lassoff, 30MinuteGamefrom ByteArray (https://github.com/mlassoff/30MinuteGame).
 
-See the show on Youtube at http://www.youtube.com/playlist?list=PLAgylfU8wrtsQWpm3NMCpEjV5fYyrC51p
+See the Lassoff tutorial videos @ http://www.youtube.com/playlist?list=PLAgylfU8wrtsQWpm3NMCpEjV5fYyrC51p
 
 ============
 
@@ -11,14 +11,31 @@ Demo available here: http://www.joesshed.com/mallardmania/mallardmania.html
 
 ============
 
-Additional features:
+Additional features added:
 
-Random sprite direction
-Random scale
-Title menu
-Game over menu with high scores
-Bootsrap theme for HTML/CSS page
-Mouse offset for canvas position on page
-Gunshot audio can be interrupted to reflect actual shots.
+- Bootsrap theme for web pages.
+- Canvas scales to browser window (compatible with mobile devices).
+- Loading indicator.
+- Game title menu (logo/CreateJS helper buttons).
+- Level options.
+- Random enemy/animation direction (left/right facing).
+- Random enemy/animation position on screen.
+- Random enemy/animation scale to create illusion of distance from the player.
+- Score entry form to save score with nameto a CSV file.
+- High scores page that calls the CSV file and displays scores in descending order.
+- Mouse events now handled by CreateJS rather than window to overcome position issues with mobile devices.
+- Gunshot audio can be interrupted to reflect actual shots fired.
+- Score text turns red if negative.
+- Timer goes red if less than 10 seconds remaining.
+
+============
+
+Game assets
+
+http://www.freesound.org/
+
+http://www.vectorbackground.net
+
+http://cooltext.com/
 
 ============

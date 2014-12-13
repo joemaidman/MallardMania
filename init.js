@@ -32,18 +32,17 @@ window.onload = function () {
      *      Set up the Canvas with Size and height
      *
      */
+
     var canvas = document.getElementById('myCanvas');
     context = canvas.getContext('2d');
     context.canvas.width = WIDTH;
     context.canvas.height = HEIGHT;
 
-
-    //
-
     /*
      *      Set up the Asset Queue and load sounds
      *
      */
+
     queue = new createjs.LoadQueue(false);
     queue.installPlugin(createjs.Sound);
     queue.on("complete", queueLoaded, this);
@@ -53,6 +52,7 @@ window.onload = function () {
      *      Create a load manifest for all assets
      *
      */
+
     queue.loadManifest([
         //sounds
         { id: 'menuMusic', src: 'assets/introMusic.mp3' },
@@ -284,9 +284,8 @@ function startGame(backgroundNumber) {
     createjs.Ticker.addEventListener('tick', tickEvent);
 
     // Set up events AFTER the game is loaded
-    window.onmousemove = handleMouseMove;
-    window.onmousedown = handleMouseDown;
-    
+    stage.on("stagemousemove",handleMouseMove);          
+    stage.on("stagemousedown",handleMouseDown);
 
 }
 
@@ -359,53 +358,28 @@ function tickEvent() {
 
     }
 
-
-
-
     animation.x = enemyXPos;
     animation.y = enemyYPos;
 
 }
 
+function handleMouseMove(evt){
 
-function handleMouseMove(event) {
- 
-  
-    var x = event.clientX;
-    var y = event.clientY;
-    console.log(event);
-    console.log(y);
-
-    // set mouseposition relative to canvas
-    var canvas = document.getElementById("myCanvas");
-
-    x -= canvas.offsetLeft;
-    y -= canvas.offsetTop;
-    x = x - 30;
-    y = y - 30;
+    var x = evt.stageX;
+    var y = evt.stageY;
 
     //Offset the position by 30 pixels so mouse is in center of crosshair
-    crossHair.x = x;
-    crossHair.y = y;
+   
+    crossHair.x = x-30;
+    crossHair.y = y-30;
+
 }
 
-function handleMouseDown(event) {
+function handleMouseDown(evt) {
 
-    var x = event.clientX;
-    var y = event.clientY;
+    var x = evt.stageX;
+    var y = evt.stageY;
 
-    // Calculate mouseposition relative to canvas
-    var canvas = document.getElementById("myCanvas");
-
-    x -= canvas.offsetLeft;
-    //console.log(x);
-    y -= canvas.offsetTop;
-    //console.log(y);
-    x = x;
-    y = y;
-
-    //Check click occurred within canvas
-    if (x > 0 && x < WIDTH && y > 0 && y < HEIGHT) {
         //Play Gunshot sound
         createjs.Sound.play("shot", createjs.Sound.INTERRUPT_ANY);
 
@@ -416,6 +390,8 @@ function handleMouseDown(event) {
         //Obtain Shot position
         var shotX = Math.round(x);
         var shotY = Math.round(y);
+ 
+        //Get the stage of the animation to get the animation's location on the stage
         var spriteX = Math.round(animation.x);
         var spriteY = Math.round(animation.y);
 
@@ -423,7 +399,7 @@ function handleMouseDown(event) {
         var distX = Math.abs(shotX - spriteX);
         var distY = Math.abs(shotY - spriteY);
 
-        // Anywhere in the body or head is a hit - but not the wings
+        // Check if the duck is hit
         if (distX < 100 && distY < 100) {
             //Hit
             stage.removeChild(animation);
@@ -467,7 +443,7 @@ function handleMouseDown(event) {
         else {
             scoreText.color = "Red";
         }
-    }
+    
 }
 
 function playMenuMusic(event)
@@ -487,30 +463,21 @@ function updateTime() {
         stage.removeChild(crossHair);
         stage.removeChild(backgroundImage);
         stage.addChild(menuBG);
-        window.onmousedown = null;
-        stage.addChild(logo);
-        logo.x = 250;
-        logo.y = 100;
+
+        //Disable the mousedown event 
+        stage.off("stagemousedown",handleMouseDown);
+      
         container = new createjs.Container();
         stage.addChild(container);
 
         var frame = new createjs.Shape();
-
-        var content = new createjs.DOMElement("foo");
-
-        //content.visible = false;
-
+         document.getElementById("myCanvas").style.visibility = "hidden";
+        document.getElementById("foo").style.visibility = "visible";
+       
         document.getElementById("scoreLabel").innerHTML = "You scored " + score.toString() + " points";
         document.getElementById("hiddenScore").value = score;
 
-        container.addChild(frame, content);
-
-        container.x = (WIDTH / 2) - 200;
-        container.y = (HEIGHT / 2) - 25;
-        container.alpha = 1;
-        container.rotation = 0;
-        container.scaleX = 1;
-
+    
         //Stop game music
         createjs.Sound.stop();
 

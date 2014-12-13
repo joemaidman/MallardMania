@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
     <title>Mallard Mania</title>
-
     <link href="bootstrap.min.css" type="text/css" rel="stylesheet" />
-
     <script language="javascript" type="text/javascript" src="createjs-2013.12.12.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script language="javascript" type="text/javascript" src="init.js"></script>
+    <script src="bootswatch.js"></script>
+    <script src="bootswatch.min.js"></script>
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <div class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -38,32 +39,26 @@
                 </div>
             </div>
         </div>
-        <div class="bs-docs-section">
-            <div id="foo" style="horizontal-alignment:center; z-index: 1; position: absolute; color:#FFF; width:500px; height:260px; padding: 5px; visibility: hidden; margin-left: auto;margin-right: auto;">
-                <h2>Thanks for playing!</h2><br />
-                <h2 name="scoreLabel" id="scoreLabel"></h2><br /><br />
-
-                <form action="writescore.php" method="post">
-                    <input name="playerName" style="color:Black;" placeholder="Enter name" class="form-control" id="playerName"></input>
-                    <input type="hidden" name="hiddenScore" style="color:Black;" class="form-control" id="hiddenScore"></input>
-                    <br /><br />
-                    <input type="submit" class="btn btn-danger" width="100" text></button>
-                </form>
+            <div class="bs-docs-section">
+                <div class="bs-component">
+                 <div class="page-header" style="height: 80px;">
             </div>
-
-            <div id="bar" style="horizontal-alignment:center; z-index: 1; position: absolute; color:#FFF; width:350px; height:260px; padding: 5px; visibility: hidden; margin-left: auto;margin-right: auto;">
-            </div>
-
-            <div class="page-header" style="height: 80px;">
-            </div>
-            <div class="bs-component">
-                <div id="jumbo" class="jumbotron">
-                <h3 id="loading" style="color:Red;padding-left:47%;">Loading...</h3> 
-                    <canvas id="myCanvas"></canvas>
-                </div>
-            </div>
-        </div>
+                    <div id="foo" style="horizontal-alignment:center; z-index: 1; position: absolute; visibility: hidden; margin-left: auto;margin-right: auto;">
+                        <h2 style="color:red;">Game Over</h2><br />                
+                        <h3 name="scoreLabel" id="scoreLabel"></h3><br />
+                        <h3>Thanks for playing!</h3><br/>
+                        <form action="writescore.php" method="post">
+                        <input  name="playerName" style="color:Black; width:400px;" placeholder="Enter name" class="form-control" id="playerName"></input>
+                        <input type="hidden" name="hiddenScore" style="color:Black;" class="form-control" id="hiddenScore"></input>
+                        <br />
+                        <input type="submit" class="btn btn-danger" value="Submit Score"></button>
+                        </form>
+                    </div>
+                <h3 id="loading" style="color:red;">Loading...</h3> 
+                <canvas style="max-width:100%;max-height:100%;" id="myCanvas"></canvas>            
+           </div>
+        
     </div>
-
+</div>
 </body>
 </html>

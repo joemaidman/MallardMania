@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
     <title>Mallard Mania</title>
-    
     <link href="bootstrap.min.css" type="text/css" rel="stylesheet" />
-
     <script language="javascript" type="text/javascript" src="createjs-2013.12.12.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script language="javascript" type="text/javascript" src="init.js"></script>
-
+    <script src="bootswatch.js"></script>
+    <script src="bootswatch.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -45,11 +45,8 @@
             <div class="page-header" style="height: 80px;">
             </div>
             <div class="bs-component">
-                <div class="jumbotron">
-
                     <h2>High Scores</h2>
                     <?php include_once("getscores.php")?>
-                </div>
             </div>
         </div>
     </div>
