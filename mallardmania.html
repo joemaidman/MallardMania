@@ -47,7 +47,7 @@
                         <h2 style="color:red;">Game Over</h2><br />                
                         <h3 name="scoreLabel" id="scoreLabel"></h3><br />
                         <h3>Thanks for playing!</h3><br/>
-                        <form action="writescore.php" method="post">
+                        <form name="scoreform" action="writescore.php" method="post" onsubmit="return required()">
                         <input  name="playerName" style="color:Black; width:400px;" placeholder="Enter name" class="form-control" id="playerName"></input>
                         <input type="hidden" name="hiddenScore" style="color:Black;" class="form-control" id="hiddenScore"></input>
                         <br />
@@ -60,5 +60,15 @@
         
     </div>
 </div>
+<script type="text/javascript">
+    function required(){
+        var empt = document.forms["scoreform"]["playerName"].value;
+        if (empt == "")
+        {
+        alert("Please enter your name");
+        return false;
+        }
+    } 
+</script>
 </body>
 </html>
