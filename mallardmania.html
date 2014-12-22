@@ -7,7 +7,6 @@
     <script language="javascript" type="text/javascript" src="createjs-2013.12.12.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script language="javascript" type="text/javascript" src="init.js"></script>
-    <script src="bootswatch.js"></script>
     <script src="bootswatch.min.js"></script>
 </head>
 <body>
