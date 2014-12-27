@@ -9,6 +9,8 @@ See the Lassoff tutorial videos @ http://www.youtube.com/playlist?list=PLAgylfU8
 
 Demo available here: http://www.joesshed.com/mallardmania/mallardmania.html
 
+Original available here: http://www.joesshed.com/30MinuteGame/index.html
+
 ============
 
 Additional features added:
@@ -47,6 +49,5 @@ Sublime Text 3 (http://www.sublimetext.com/) for code editing
 Gimp 2 (http://www.gimp.org) for image editing
 
 Audacity (http://audacity.sourceforge.net) for audio editing
-
 
 ============

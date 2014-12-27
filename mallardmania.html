@@ -32,7 +32,7 @@
                             <a href="https://github.com/joeyjoeuk/MallardMania" target="_blank">GitHub</a>
                         </li>
                         <li>
-                            <a href="http://www.joesshed.com/index.html#contact" target="_blank">Contact</a>
+                            <a href="https://twitter.com/joemaidman" target="_blank">Contact</a>
                         </li>
                         <li>
                             <a href="https://github.com/joeyjoeuk/MallardMania#mallard-mania" target="_blank">About</a>
