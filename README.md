@@ -15,7 +15,7 @@ Original available here: http://www.joesshed.com/30MinuteGame/index.html
 
 Additional features added:
 
-- Bootsrap theme for web pages.
+- Bootstrap theme for web pages.
 - Canvas scales to browser window (compatible with mobile devices).
 - Loading indicator.
 - Game title menu (logo/CreateJS helper buttons).
