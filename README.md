@@ -32,10 +32,21 @@ Additional features added:
 
 Game assets
 
-http://www.freesound.org/
+Music & sound effects - http://www.freesound.org/
 
-http://www.vectorbackground.net
+Images - http://www.vectorbackground.net
 
-http://cooltext.com/
+Logo - http://cooltext.com/
+
+============
+
+Tools / Software
+
+Sublime Text 3 (http://www.sublimetext.com/) for code editing
+
+Gimp 2 (http://www.gimp.org) for image editing
+
+Audacity (http://audacity.sourceforge.net) for audio editing
+
 
 ============

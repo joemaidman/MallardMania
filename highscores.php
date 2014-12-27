@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
-    <title>Mallard Mania</title>
+    <title>Mallard Mania - High scores</title>
     <link href="bootstrap.min.css" type="text/css" rel="stylesheet" />
     <script language="javascript" type="text/javascript" src="createjs-2013.12.12.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -33,6 +33,9 @@
                         </li>
                         <li>
                             <a href="http://www.joesshed.com/index.html#contact" target="_blank">Contact</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/joeyjoeuk/MallardMania#mallard-mania" target="_blank">About</a>
                         </li>
                     </ul>
 
