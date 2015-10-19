@@ -7,9 +7,9 @@ See the Lassoff tutorial videos @ http://www.youtube.com/playlist?list=PLAgylfU8
 
 ============
 
-Demo available here: http://www.joesshed.com/mallardmania/mallardmania.html
+Demo available here: http://www.joemaidman.com/mallardmania/index.html
 
-Original available here: http://www.joesshed.com/30MinuteGame/index.html
+Original available here: http://www.joemaidman.com/30MinuteGame/index.html
 
 ============
 

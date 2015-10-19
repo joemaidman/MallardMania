@@ -14,7 +14,7 @@
         <div class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a href="mallardmania.html" class="navbar-brand">
+                    <a href="index.html" class="navbar-brand">
                         <img style="max-width:100%;max-height:100%;" src="assets/logo.png" />
                     </a>
                     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
