@@ -122,6 +122,8 @@ function queueLoaded(event) {
 
     var helper = new createjs.ButtonHelper(start, "normal");
     start.addEventListener("click", showLevelSelect);
+    start.addEventListener("click", playMenuMusic);
+   
 
     // Create game spritesheets
     spriteSheetLeft = new createjs.SpriteSheet({
@@ -158,8 +160,6 @@ function queueLoaded(event) {
 
     createjs.Ticker.setFPS(20);
     createjs.Ticker.addEventListener('tick', stage);
-    
-    createjs.Sound.play("menuMusic", { loop: -1 });
 }
 
 function showLevelSelect(event) {
